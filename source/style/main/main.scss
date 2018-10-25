@@ -39,6 +39,10 @@ body {
   width: 70%;
 }
 
+.air-date {
+  padding-top: 50px;
+}
+
 .interior {
   margin: 50px;
   min-width: 700px;
@@ -50,7 +54,6 @@ h2 {
   font-family: "Open Sans", sans-serif;
   color: $font-color;
   font-size: 20px;
-  padding-top: 50px;
   text-align: center;
   font-weight: bold;
 }
@@ -159,23 +162,6 @@ h2 {
   height: 450px;
   box-shadow: 0 0 30px -2px #000;
 }
-//start
-
-// .duration {
-//   background: #7662fc;
-// }
-
-// .ghost {
-//   background: blue;
-// }
-
-// .genre {
-//   background: yellow;
-// }
-
-// .date {
-//   background: orange;
-// }
 
 .summary-text,
 .date,
@@ -185,13 +171,6 @@ h2 {
   width: 80%;
   // margin: 140px 0;
 }
-
-// .title-block {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   background-color: black;
-// }
 
 hr {
   width: 80%;
@@ -292,11 +271,11 @@ li > label {
 }
 
 .screening-block {
+  margin: 60px 0 0 100px;
   display: flex;
-  // justify-content: ;
-  align-items: flex-end;
+  justify-content: space-around;
+  align-items: flex-start;
   background: #000;
-  width: 50%;
 }
 
 .row {
