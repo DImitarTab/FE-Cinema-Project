@@ -66,6 +66,7 @@
     "yargs": "^5.0.0"
   },
   "dependencies": {
+    "jquery": "^3.3.1",
     "sass-lint": "^1.12.1"
   }
 }
