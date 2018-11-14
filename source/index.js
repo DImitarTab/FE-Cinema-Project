@@ -14,7 +14,28 @@ $(".seats").click(function() {
   });
   $(".form-seats").val(selectedSeats.join(", "));
   $(this).toggleClass("clicked");
+  $(this)
+    .parent()
+    .toggleClass("selected");
 });
+
+$(document).ready(function() {
+  var url = new URL(document.location);
+  var params = url.searchParams;
+  var paper = params.get("movie");
+  $(".movie-select").val(paper);
+});
+
+const urlParams = new URLSearchParams(window.location.search);
+const myTime = urlParams.get("time");
+
+window.onload = function() {
+  SetDefaultValue();
+};
+
+function SetDefaultValue() {
+  document.getElementById("time-of-screening").value = myTime;
+}
 
 /*
 To use jQuery, first install it as a dependency: `yarn add jquery`.

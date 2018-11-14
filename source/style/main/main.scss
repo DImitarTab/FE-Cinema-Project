@@ -267,6 +267,9 @@ li > label {
   margin-top: 5px;
   border: 1px solid green;
   background-color: #ffda79;
+  &.selected {
+    background-color: red;
+  }
 }
 
 .screen {
@@ -387,4 +390,8 @@ input:focus::-webkit-input-placeholder {
   &:focus {
     outline: none;
   }
+}
+
+.heading--about {
+  padding-top: 20px;
 }
