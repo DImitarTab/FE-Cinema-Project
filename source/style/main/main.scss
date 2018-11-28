@@ -59,7 +59,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   // min-width: 500px;
-  flex: 0 2 1720px;
+  width: 100%;
   animation: fadeIn 0.5s linear;
   animation-fill-mode: both;
 }
@@ -69,13 +69,11 @@ h2 {
   flex-direction: column;
   justify-content: flex-start;
   // min-width: 500px;
-  flex: 0 2 1720px;
 }
 
 .third-panel {
   align-items: center;
   justify-content: space-evenly;
-  // background: white;
 }
 
 .movie-row {
@@ -92,7 +90,7 @@ h2 {
 }
 
 .header-name,
-.nav {
+nav {
   display: flex;
   font-weight: bold;
   background-color: #f83745;
@@ -223,7 +221,7 @@ ul > li {
 
 //end
 
-.nav {
+nav {
   background-color: $darker-background;
   font-size: 20px;
 }

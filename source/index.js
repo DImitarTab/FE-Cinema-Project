@@ -4,30 +4,50 @@ import "./style/style.scss";
 import "./style/vendor/style.css";
 import $ from "jquery";
 
-var selectedSeats = [];
-
-$(".seats").click(function() {
-  selectedSeats = [];
-  $(".seats:checked").each(function() {
-    var test = this.checked ? $(this).data("seat") : "";
-    selectedSeats.push(test);
-  });
-  $(".form-seats").val(selectedSeats.join(", "));
-  $(this).toggleClass("clicked");
-  $(this)
-    .parent()
-    .toggleClass("selected");
-});
-
-$(document).ready(function() {
-  var url = new URL(document.location);
-  var params = url.searchParams;
-  var paper = params.get("movie");
-  $(".movie-select").val(paper);
-});
-
+let selectedSeats = [];
 const urlParams = new URLSearchParams(window.location.search);
 const myTime = urlParams.get("time");
+
+// $(".seats").click(function() {
+//   selectedSeats = [];
+//   $(".seats:checked").each(function() {
+//     var test = this.checked ? $(this).data("seat") : "";
+//     selectedSeats.push(test);
+//   });
+//   $(".form-seats").val(selectedSeats.join(", "));
+//   $(this).toggleClass("clicked");
+//   $(this)
+//     .parent()
+//     .toggleClass("selected");
+// });
+
+$(function() {
+  let url = new URL(document.location);
+  let params = url.searchParams;
+  let paper = params.get("movie");
+  $(".movie-select").val(paper);
+
+  $(".seats").click(function() {
+    selectedSeats = [];
+    $(".seats:checked").each(function() {
+      var test = this.checked ? $(this).data("seat") : "";
+      selectedSeats.push(test);
+    });
+    $(".form-seats").val(selectedSeats.join(", "));
+    $(this).toggleClass("clicked");
+    $(this)
+      .parent()
+      .toggleClass("selected");
+  });
+
+  if (typeof window.history.pushState == "function") {
+    window.history.pushState(
+      {},
+      "Hide",
+      "http://localhost:8008/book-ticket.html"
+    );
+  }
+});
 
 window.onload = function() {
   SetDefaultValue();
