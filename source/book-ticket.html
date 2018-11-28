@@ -11,24 +11,18 @@
 
 <body>
     <div class="container">
-        <section class="header">
-            <div class="header-name">
-                <h1>Sliven Cinema</h1>
-            </div>
-        </section>
+        <header class="header">
+          <div class="header-name"><h1>Sliven Cinema</h1></div>
+        </header>
         <section class="main-body">
-            <div class="nav">
-                <ul>
-                    <li>
-                        <a href="index.html">This week</a></li>
-                    <li>
-                        <a href="coming-soon.html">Coming Soon</a></li>
-                    <li>
-                        <a href="book-ticket.html">Book a ticket</a></li>
-                    <li>
-                        <a href="about.html">About the cinema</a></li>
-                </ul>
-            </div>
+            <nav>
+              <ul>
+                <li><a href="index.html">This week</a></li>
+                <li><a href="coming-soon.html">Coming Soon</a></li>
+                <li><a href="book-ticket.html">Book a ticket</a></li>
+                <li><a href="about.html">About the cinema</a></li>
+              </ul>
+            </nav>
             <div class="main-panel third-panel">
                 <form class="selection-form">
                     <div class="heading heading--title">
@@ -57,12 +51,17 @@
                                 <option value="alpha">Alpha</option>
                                 <option value="venom">Venom</option>
                                 <option value="the-equalizer-2">The Equalizer 2</option>
+                                <option value="96">96</option>
+                                <option value="bad-times-at-the-El-royale">Bad Times at the El royale</option>
+                                <option value="hunter-killer">Hunter Killer</option>
+                                <option value="goosebumps-2">Goosebumps 2: Haunted Halloween</option>
+                                <option value="overlord">Overlord</option>
                             </select>
                         </label>
                         <label>
                             <!-- Screening time: -->
-                            <input type="text" pattern="^([0-1]{1}[0-9]{1}|20|21|22|23):[0-5]{1}[0-9]{1}$" placeholder="Choose a screen time" required
-                            />
+                            <input type="text" id="time-of-screening" pattern="^([0-1]{1}[0-9]{1}|20|21|22|23):[0-5]{1}[0-9]{1}$" placeholder="Choose a screen time"
+                                required />
                         </label>
                         <label>
                             <!-- Seats: -->
