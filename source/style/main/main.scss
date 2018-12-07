@@ -4,12 +4,15 @@ body {
 
 .header {
   display: flex;
+  width: 100%;
   background-color: #ff424f;
 }
 
 .container {
   font-family: "Open Sans", sans-serif;
   color: $font-color;
+  width: 100%;
+  background-color: #7662fc;
 }
 
 .main-body {
@@ -259,10 +262,14 @@ nav {
   }
 }
 
+.row {
+  display: flex;
+}
+
 li > label {
-  display: inline-block;
-  padding: 5px;
-  margin-top: 5px;
+  display: flex;
+  padding: 10px;
+  margin: 2px;
   border: 1px solid green;
   background-color: #ffda79;
   &.selected {

@@ -40,22 +40,22 @@ $(function() {
       .toggleClass("selected");
   });
 
-  if (typeof window.history.pushState == "function") {
-    window.history.pushState(
-      {},
-      "Hide",
-      "http://localhost:8008/book-ticket.html"
-    );
+  // if (typeof window.history.pushState == "function") {
+  //   window.history.pushState(
+  //     {},
+  //     "Hide",
+  //     "http://localhost:8008/book-ticket.html"
+  //   );
+  // }
+
+  window.onload = function() {
+    SetDefaultValue();
+  };
+
+  function SetDefaultValue() {
+    document.getElementById("time-of-screening").value = myTime;
   }
 });
-
-window.onload = function() {
-  SetDefaultValue();
-};
-
-function SetDefaultValue() {
-  document.getElementById("time-of-screening").value = myTime;
-}
 
 /*
 To use jQuery, first install it as a dependency: `yarn add jquery`.
